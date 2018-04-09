@@ -39,7 +39,7 @@ generated quantities{
   
   
   for (i in 1:N){
-    y_hat[i] = normal_rng(mu[i], sigma_seasons);
+    y_hat[i] = normal_rng(mu[i], sigma_obs);
     diff_hat[i] = y_hat[i] - y[i];
     log_lik[i] = normal_lpdf(y[i] | mu[i], sigma_obs);
   }
